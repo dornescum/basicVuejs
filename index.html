@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <script src="https://unpkg.com/vue@next"></script>
     <title>Title</title>
+    <style>
+        ul li {
+            padding: 1rem;
+        }
+
+        .favorite {
+            color: red;
+            background: lightcyan;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,8 +23,8 @@
     <div style="display: flex">
         <nav>
             <button @click="showBtn1">1</button>
-            <button @click="showBtn2" >2</button>
-            <button @click="showBtn3" >3</button>
+            <button @click="showBtn2">2</button>
+            <button @click="showBtn3">3</button>
         </nav>
         <div v-if="btn1">
 
@@ -36,11 +46,17 @@
         </div>
 
 
-
     </div>
 
-    <ul >
-        <li v-for="name in names" key="name.id">{{name.name}}</li>
+    <ul>
+        <li :class="{favorite: name.isFav}"
+            v-for="name in names"
+            key="name.id"
+            id="name.id"
+            @click="toggleFavorite(name)"
+        >
+            {{name.name}}
+        </li>
     </ul>
 </div>
 

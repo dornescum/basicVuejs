@@ -1,7 +1,8 @@
 const names =[
-	{name: 'gogu', id:1},
-	{name: 'gigi', id:2},
-	{name: 'gica', id:3},
+	{name: 'gogu', id:1, isFav:true},
+	{name: 'gigi', id:2, isFav:false},
+	{name: 'gica', id:3, isFav:false},
+	{name: 'costel', id:4, isFav:true},
 ];
 const app = Vue.createApp({
 	data() {
@@ -36,6 +37,10 @@ const app = Vue.createApp({
 		changeTitle(){
 			this.title = 'another test'
 			console.log(this.title);
+		},
+		toggleFavorite(name){
+
+			name.isFav =!name.isFav;
 		}
 	}
 });
