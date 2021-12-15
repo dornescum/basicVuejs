@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <h1 @click="changeTitle">{{title}}</h1>
+    <div style="display: flex">
+        <nav>
+            <button @click="showBtn1">1</button>
+            <button @click="showBtn2" >2</button>
+            <button @click="showBtn3" >3</button>
+        </nav>
+        <div v-if="btn1">
+
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, suscipit? 11111</p>
+            </div>
+        </div>
+        <div v-if="btn2">
+
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, suscipit?2222222</p>
+            </div>
+        </div>
+        <div v-if="btn3">
+
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, suscipit?33333</p>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
