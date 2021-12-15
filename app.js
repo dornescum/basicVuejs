@@ -1,10 +1,16 @@
+const names =[
+	{name: 'gogu', id:1},
+	{name: 'gigi', id:2},
+	{name: 'gica', id:3},
+];
 const app = Vue.createApp({
 	data() {
 		return {
 			title: 'just a test',
 			btn1: true,
 			btn2: false,
-			btn3: false
+			btn3: false,
+			names: names
 		};
 	},
 	methods:{
