@@ -10,7 +10,8 @@ const app = Vue.createApp({
 			btn1: true,
 			btn2: false,
 			btn3: false,
-			names: names
+			names: names,
+			url:'https://www.youtube.com/watch?v=NcZaWLX8BPE&list=RDb1zd5C4v7DE&index=5'
 		};
 	},
 	methods:{
