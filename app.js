@@ -41,6 +41,10 @@ const app = Vue.createApp({
 		toggleFavorite(name){
 
 			name.isFav =!name.isFav;
+		},
+		handleName(){
+			console.log(this.$refs.name);
+			this.$refs.name.classList.add('active')
 		}
 	},
 	computed:{
