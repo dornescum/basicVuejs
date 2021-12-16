@@ -42,6 +42,11 @@ const app = Vue.createApp({
 
 			name.isFav =!name.isFav;
 		}
+	},
+	computed:{
+		filteredNames(){
+			return  this.names.filter((name)=> name.isFav)
+		}
 	}
 });
 app.mount('#app');

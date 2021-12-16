@@ -58,6 +58,22 @@
             {{name.name}}
         </li>
     </ul>
+    <p>
+        Only favorites
+    </p>
+
+     <ul>
+        <li :class="{favorite: name.isFav}"
+            v-for="name in filteredNames"
+            key="name.id"
+
+            @click="toggleFavorite(name)"
+        >
+            {{name.name}}
+        </li>
+    </ul>
+
+
 </div>
 
 <script src="app.js"></script>
